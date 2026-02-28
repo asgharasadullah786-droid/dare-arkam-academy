@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dare Arkam Academy</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth;}
+body{font-family:Arial;background:#f8f9fa;}
+
+.navbar{box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+.nav-link.active{font-weight:bold;color:#ffc107 !important;}
+
+.hero{
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1588072432836-e10032774350');
+background-size:cover;
+background-position:center;
+color:white;
+padding:150px 0;
+text-align:center;
+}
+
+.section-title{margin:80px 0 40px;text-align:center;font-weight:bold;}
+
+.card{
+border:none;
+border-radius:20px;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+.card:hover{transform:translateY(-8px);}
+
+.counter{
+background:#0d6efd;
+color:white;
+padding:60px 0;
+text-align:center;
+}
+
+.counter h2{font-size:40px;font-weight:bold;}
+
+footer{
+background:#111;
+color:white;
+padding:30px;
+margin-top:60px;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+z-index:1000;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">Dare Arkam Academy</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#classes">Classes</a></li>
+<li class="nav-item"><a class="nav-link" href="#teachers">Teachers</a></li>
+<li class="nav-item"><a class="nav-link" href="#admission">Admission</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<li class="nav-item"><a class="btn btn-warning ms-2" href="admin.html">Admin</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<h1 class="display-4 fw-bold">Welcome to Dare Arkam Academy</h1>
+<p class="lead">Quality Tuition For Class 1 to 12</p>
+<a href="#admission" class="btn btn-warning btn-lg mt-3">Apply Now</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="pt-5 mt-5">
+<div class="container">
+<h2 class="section-title">About Us</h2>
+<p class="text-center">
+We provide high-quality tuition education with experienced teachers and modern teaching methods.
+</p>
+</div>
+</section>
+
+<!-- COUNTER -->
+<section class="counter">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<h2 id="studentsCount">0</h2>
+<p>Students</p>
+</div>
+<div class="col-md-4">
+<h2>15+</h2>
+<p>Qualified Teachers</p>
+</div>
+<div class="col-md-4">
+<h2>10+</h2>
+<p>Years Experience</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CLASSES -->
+<section id="classes">
+<div class="container">
+<h2 class="section-title">Our Classes</h2>
+<div class="row text-center">
+<div class="col-md-3 mb-4"><div class="card p-4">Class 1 – 5</div></div>
+<div class="col-md-3 mb-4"><div class="card p-4">Class 6 – 8</div></div>
+<div class="col-md-3 mb-4"><div class="card p-4">Class 9 – 10</div></div>
+<div class="col-md-3 mb-4"><div class="card p-4">Class 11 – 12</div></div>
+</div>
+</div>
+</section>
+
+<!-- TEACHERS -->
+<section id="teachers">
+<div class="container">
+<h2 class="section-title">Our Teachers</h2>
+<div class="row text-center">
+<div class="col-md-4"><div class="card p-4">Math Teacher</div></div>
+<div class="col-md-4"><div class="card p-4">Science Teacher</div></div>
+<div class="col-md-4"><div class="card p-4">English Teacher</div></div>
+</div>
+</div>
+</section>
+
+<!-- ADMISSION -->
+<section id="admission">
+<div class="container">
+<h2 class="section-title">Online Admission</h2>
+<div class="row">
+<div class="col-md-6">
+<input type="text" id="studentName" class="form-control mb-3" placeholder="Student Name">
+<input type="number" id="studentClass" class="form-control mb-3" placeholder="Class">
+<input type="text" id="parentPhone" class="form-control mb-3" placeholder="Parent Phone">
+<button class="btn btn-primary" onclick="saveAdmission()">Submit</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact Us</h2>
+<div class="row">
+<div class="col-md-6">
+<p><strong>Address:</strong> Your City</p>
+<p><strong>Phone:</strong> 0301 9061883</p>
+</div>
+<div class="col-md-6">
+<iframe src="https://maps.google.com/maps?q=lahore&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="250" style="border:0;"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="text-center">
+<p>© 2026 Dare Arkam Academy | All Rights Reserved</p>
+</footer>
+
+<a href="https://wa.me/923000000000" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+let students = JSON.parse(localStorage.getItem("students")) || [];
+document.getElementById("studentsCount").innerText = students.length;
+
+function saveAdmission(){
+let name = document.getElementById("studentName").value;
+let cls = document.getElementById("studentClass").value;
+let phone = document.getElementById("parentPhone").value;
+
+if(!name || !cls || !phone){
+alert("Please fill all fields");
+return;
+}
+
+let admissions = JSON.parse(localStorage.getItem("admissions")) || [];
+admissions.push({name,cls,phone});
+localStorage.setItem("admissions",JSON.stringify(admissions));
+alert("Admission Submitted Successfully!");
+document.getElementById("studentName").value="";
+document.getElementById("studentClass").value="";
+document.getElementById("parentPhone").value="";
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
